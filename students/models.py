@@ -11,7 +11,7 @@ class Student(models.Model):
     url = models.URLField(blank=True, verbose_name="посилання на сторінку в соцмережі")
     date_of_birth = models.DateField(verbose_name="дата народження")
     user = models.ForeignKey(User,verbose_name="користувач")
-    courses = models.ManyToManyField(Course)
+    cour_ses = models.ManyToManyField(Course)
 
     def __str__(self):
         return "%s %s" % (self.first_name, self.last_name)
