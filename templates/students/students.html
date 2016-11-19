@@ -33,9 +33,9 @@
         <td>{{ student.email }}</td>
         <td>{{ student.url }}</td>
         <td>{{ student.user }}</td>
-          {% for c in student.cour_ses.all %}
-              <td>{{ c }}</td>
-          {% endfor %}
+        <td>{% for c in student.cour_ses.all %}
+              <h6>{{ c }}</h6>
+          {% endfor %}</td>
       </tr>
       {% endfor %}
      </table>
