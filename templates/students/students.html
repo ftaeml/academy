@@ -33,7 +33,9 @@
         <td>{{ student.email }}</td>
         <td>{{ student.url }}</td>
         <td>{{ student.user }}</td>
-        <td>{{ student.cour_ses }}</td>
+          {% for c in student.cour_ses.all %}
+              <td>{{ c }}</td>
+          {% endfor %}
       </tr>
       {% endfor %}
      </table>
