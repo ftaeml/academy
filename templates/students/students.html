@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+
+           table, th, td {
+                          border: 2px solid dimgrey;
+                          border-collapse: collapse;
+                         }
+    </style>
+    <meta charset="UTF-8">
+    <title>Таблиця інформації про учнів</title>
+</head>
+<body>
+     <br/>
+     <table style="width:100%">
+      <tr>
+        <th>Ім’я</th>
+        <th>Призвіще</th>
+        <th>Дата народження</th>
+        <th>Телефон</th>
+        <th>Електрона пошта</th>
+        <th>Посилання на соцмережі</th>
+        <th>Користувач</th>
+        <th>Курси</th>
+      </tr>
+      {% for student in students %}
+      <tr>
+        <td>{{ student.first_name }}</td>
+        <td>{{ student.last_name }}</td>
+        <td>{{ student.date_of_birth }}</td>
+        <td>{{ student.phone }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.url }}</td>
+        <td>{{ student.user }}</td>
+        <td>{{ student.courses }}</td>
+      </tr>
+      {% endfor %}
+     </table>
+     <br/>
+     <a href="/teachers">Викладачі &rarr;</a>
+     <a href="/courses">Курси &rarr;</a>
+     <br/>
+     <br/>
+     <p>Я не розумію чому курси не відображаються так як має бути.</p>
+</body>
+</html>

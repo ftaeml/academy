@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+           table, th, td {
+                          border: 2px solid dimgrey;
+                          border-collapse: collapse;
+                          }
+    </style>
+    <meta charset="UTF-8">
+    <title>Таблиця інформації про викладачів</title>
+</head>
+<body>
+     <br/>
+     <table style="width:100%">
+      <tr>
+        <th>Ім’я</th>
+        <th>Призвіще</th>
+        <th>Дата народження</th>
+        <th>Телефон</th>
+        <th>Електрона пошта</th>
+        <th>Користувач</th>
+      </tr>
+      {% for teacher in teachers %}
+      <tr>
+        <td>{{ teacher.first_name }}</td>
+        <td>{{ teacher.last_name }}</td>
+        <td>{{ teacher.date_of_birth }}</td>
+        <td>{{ teacher.phone }}</td>
+        <td>{{ teacher.email }}</td>
+        <td>{{ teacher.user }}</td>
+      </tr>
+      {% endfor %}
+     </table>
+     <br/>
+     <a href="/students">Учні &rarr;</a>
+     <a href="/courses">Курси &rarr;</a>
+</body>
+</html>

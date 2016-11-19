@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+           table, th, td {
+                          border: 2px solid dimgrey;
+                          border-collapse: collapse;
+                         }
+    </style>
+    <meta charset="UTF-8">
+    <title>Таблиця інформації про курси</title>
+</head>
+<body>
+     <br/>
+     <table style="width:100%">
+      <tr>
+        <th>Назва</th>
+        <th>Опис</th>
+        <th>Викладач</th>
+        <th>Початок</th>
+        <th>Закінчення</th>
+
+      </tr>
+      {% for cours in courses %}
+      <tr>
+        <td>{{ cours.name }}</td>
+        <td>{{ cours.description }}</td>
+        <td>{{ cours.teacher }}</td>
+        <td>{{ cours.start }}</td>
+        <td>{{ cours.end }}</td>
+      </tr>
+      {% endfor %}
+     </table>
+     <br/>
+     <a href="/students">Учні &rarr;</a>
+     <a href="/teachers">Викладачі &rarr;</a>
+</body>
+</html>
+
