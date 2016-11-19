@@ -34,7 +34,7 @@
         <td>{{ student.url }}</td>
         <td>{{ student.user }}</td>
         <td>{% for c in student.cour_ses.all %}
-              <h6>{{ c }}</h6>
+              {{ c }}<br/>
           {% endfor %}</td>
       </tr>
       {% endfor %}
@@ -42,8 +42,5 @@
      <br/>
      <a href="/teachers">Викладачі &rarr;</a>
      <a href="/courses">Курси &rarr;</a>
-     <br/>
-     <br/>
-     <p>Я не розумію чому курси не відображаються так як має бути.</p>
 </body>
 </html>
